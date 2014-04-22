@@ -5,7 +5,7 @@ JSON files received from the Ecosense RabbitMQ to SQL commands to introduce the 
 into the VPP database.
 
 Version 0.1
-Date 21/04/2014
+Date 22/04/2014
 Developed by Sergi Rotger Griful <srgr@eng.au.dk>
 """
 
