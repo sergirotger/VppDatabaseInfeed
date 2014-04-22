@@ -17,7 +17,7 @@ PRIMARY KEY(apartment_id, datetime)
 CREATE TABLE IF NOT EXISTS Sensors(
 sensor_id INT NOT NULL,
 description TEXT NULL,
-units TEXT NULL,
+unit TEXT NULL,
 datetime TIMESTAMP WITH TIME ZONE NOT NULL,
 PRIMARY KEY(sensor_id, datetime)
 );
