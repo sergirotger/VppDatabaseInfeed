@@ -21,7 +21,6 @@ class JsonString(object):
     """
     JsonString class defines the received string from the RabbitMQ server. It is composed by an identification text,
     composed by 8 characters, and a json file with the information.
-    data type of t
     """
 
     def __init__(self, json_string='GFKXX00Y{"version":"??","timestamp":"2013-12-17T12:52:30Z", "others":[]}'):
@@ -31,12 +30,12 @@ class JsonString(object):
 
 class GFKRE003(JsonString):
     """
-    Reading class defines the functions with the
+    Reading class defines the GFKRE003 JSON strings.
     """
 
     def sensor_mapping(self, dic):
         """
-        Update the mapping sensor id sensor apartment in a dictionary
+        Update the mapping sensor id sensor apartment in a dictionary.
         """
         for meas in self.json['reading']:
             sen_id = meas['sensorId']
@@ -58,7 +57,7 @@ class GFKRE003(JsonString):
 
 class GFKSC002(JsonString):
     """
-    Reading class defines the functions with the
+    Reading class defines the GFKSC002 JSON strings.
     """
 
     def json2sql_apartments(self):
@@ -86,6 +85,9 @@ class GFKSC002(JsonString):
 
 
 class TestDefinedClasses(unittest.TestCase):
+    """
+    Defines the test for the defined classes.
+    """
     def setUp(self):
         f = open('json_format_example.txt', 'r')
         self.reading = f.readline().replace('\n', '')
